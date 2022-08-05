@@ -43,8 +43,8 @@
     "url": "git+https://github.com/birkskyum/unassert-rollup-plugin.git"
   },
   "keywords": [
+    "plugin",
     "rollup",
-    "rollup-plugin",
     "unassert"
   ],
   "author": "Birk Skyum <birk.skyum@pm.me>",
