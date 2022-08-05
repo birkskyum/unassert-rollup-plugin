@@ -1,0 +1,55 @@
+{
+  "name": "unassert-rollup-plugin",
+  "version": "1.0.0",
+  "description": "RollupJS plugin to remove assertion calls via Unassert",
+  "type": "module",
+  "module": "dist/unassert-rollup-plugin.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "dependencies": {
+    "@rollup/pluginutils": "^4.2.1",
+    "acorn": "^8.8.0",
+    "acorn-import-assertions": "^1.8.0",
+    "convert-source-map": "^1.8.0",
+    "escodegen": "^2.0.0",
+    "multi-stage-sourcemap": "^0.3.1",
+    "unassert": "^1.6.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-mourner": "^3.0.0",
+    "rollup": "^2.77.2",
+    "tape": "^5.5.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "test": "node --loader ts-node/esm --experimental-specifier-resolution=node test/test.ts",
+    "pretest": "npm run lint && npm run build",
+    "build": "rollup --configPlugin @rollup/plugin-typescript -c rollup.config.ts ",
+    "lint": "eslint src test rollup.config.ts",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birkskyum/unassert-rollup-plugin.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "unassert"
+  ],
+  "author": "Birk Skyum <birk.skyum@pm.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/birkskyum/unassert-rollup-plugin/issues"
+  },
+  "homepage": "https://github.com/birkskyum/unassert-rollup-plugin"
+}
