@@ -12,7 +12,7 @@ const config = (format): RollupOptions => ({
     input: './src/unassert.ts',
     external: ['rollup-pluginutils', 'acorn', 'escodegen', 'unassert', 'convert-source-map', 'multi-stage-sourcemap'],
     output: {
-        file: `dist/unassert-rollup-plugin.${format}.js`,
+        file: `dist/unassert-rollup-plugin.mjs`,
         format,
         sourcemap: true
     },
@@ -23,7 +23,7 @@ const config = (format): RollupOptions => ({
 })
 
 const configArray: RollupOptions[] = [
-  config('cjs'),
+  // config('cjs'),
   config('es')
 ];
 

@@ -1,14 +1,17 @@
 {
   "name": "unassert-rollup-plugin",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Unassert Rollup plugin",
   "type": "module",
-  "main": "dist/unassert-rollup-plugin.es.js",
+  "main": "dist/unassert-rollup-plugin.mjs",
   "types": "./dist/src/unassert.d.ts",
   "files": [
     "src",
     "dist"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "dependencies": {
     "@rollup/pluginutils": "^4.2.1",
     "acorn": "^8.8.0",
