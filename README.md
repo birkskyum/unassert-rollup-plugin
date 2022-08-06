@@ -14,7 +14,7 @@ A [Rollup](http://www.rollupjs.org) plugin to remove assertion calls via [Unasse
 Add it to the `plugins` section of your Rollup config as follows:
 
 ```ts
-import unassert from 'unassert-rollup-plugin';
+import {unassert} from 'unassert-rollup-plugin';
 
 export default {
     ...

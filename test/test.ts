@@ -1,5 +1,5 @@
 import {rollup} from  'rollup';
-import rollupUnassert from  '../dist/unassert-rollup-plugin.js';
+import {unassert} from  '../dist/unassert-rollup-plugin.js';
 import fs from  'fs';
 import test from  'tape';
 import typescript from "@rollup/plugin-typescript"
@@ -9,7 +9,7 @@ test('removes assert code', (t) => {
     rollup({
         input: 'test/original.ts',
         plugins: [
-            rollupUnassert({
+          unassert({
               include: ['**/*'], // by default, unassert only includes .js files
             }),
             typescript()

@@ -13,7 +13,8 @@ const config: RollupOptions[] = [{
     external: ['rollup-pluginutils', 'acorn', 'escodegen', 'unassert', 'convert-source-map', 'multi-stage-sourcemap'],
     output: {
         file: `dist/unassert-rollup-plugin.js`,
-        format: 'esm'
+        format: 'esm',
+        sourcemap: true
     },
     plugins: [
       nodeResolve,
