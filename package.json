@@ -1,9 +1,10 @@
 {
   "name": "unassert-rollup-plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Unassert Rollup plugin",
   "type": "module",
-  "module": "./dist/unassert-rollup-plugin.js",
+  "main": "dist/rollup-plugin-unassert.cjs.js",
+  "module": "dist/rollup-plugin-unassert.es.js",
   "types": "./dist/src/unassert.d.ts",
   "files": [
     "src",

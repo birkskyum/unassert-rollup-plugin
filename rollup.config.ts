@@ -8,18 +8,24 @@ export const nodeResolve = resolve({
   preferBuiltins: false
 });
 
-const config: RollupOptions[] = [{
+const config = (format): RollupOptions => ({
     input: './src/unassert.ts',
     external: ['rollup-pluginutils', 'acorn', 'escodegen', 'unassert', 'convert-source-map', 'multi-stage-sourcemap'],
     output: {
-        file: `dist/unassert-rollup-plugin.js`,
-        format: 'esm',
+        file: `dist/unassert-rollup-plugin.${format}.js`,
+        format,
         sourcemap: true
     },
     plugins: [
       nodeResolve,
       typescript(),
       commonjs()]
-}]
+})
 
-export default config
+const configArray: RollupOptions[] = [
+  config('cjs'),
+  config('es')
+];
+
+export default configArray
+
