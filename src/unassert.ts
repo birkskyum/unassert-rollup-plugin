@@ -3,7 +3,7 @@ import {createFilter, FilterPattern} from '@rollup/pluginutils';
 import {Parser} from 'acorn';
 import {importAssertions} from 'acorn-import-assertions';
 import escodegen from 'escodegen';
-import unassertjs from 'unassert';
+import { unassertAst } from 'unassert';
 import convert from 'convert-source-map';
 import {transfer} from 'multi-stage-sourcemap';
 
@@ -69,7 +69,7 @@ export default function unassert(options: {sourcemap?:boolean, include?:FilterPa
                 });
 
                 escodegen.attachComments(ast, comments, tokens);
-                const unassertedAst = escodegen.generate(unassertjs(ast), {
+                const unassertedAst = escodegen.generate(unassertAst(ast), {
                     sourceMap: id,
                     sourceContent: code,
                     sourceMapWithCode: true,
