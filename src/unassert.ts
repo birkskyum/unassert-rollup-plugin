@@ -40,7 +40,7 @@ function mergeSourceMap(incomingSourceMap, outgoingSourceMap) {
     return JSON.parse(transfer({fromSourceMap: outgoingSourceMap, toSourceMap: incomingSourceMap}));
 }
 
-export function unassert(options: {sourcemap?:boolean, include?:FilterPattern|string[], exclude?:FilterPattern} = {}) {
+export default function unassert(options: {sourcemap?:boolean, include?:FilterPattern|string[], exclude?:FilterPattern} = {}) {
     if (options.sourcemap === undefined) {
         options.sourcemap = true;
     }
