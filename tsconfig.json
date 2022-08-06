@@ -4,6 +4,8 @@
     "allowSyntheticDefaultImports": true,
     "checkJs": false,
     "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "dist",
     "importHelpers": false,
     "isolatedModules": true,
     //"importsNotUsedAsValues": "preserve",
