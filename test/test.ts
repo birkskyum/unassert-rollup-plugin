@@ -1,5 +1,5 @@
 import {rollup} from  'rollup';
-import unassert from  '../dist/unassert-rollup-plugin.mjs';
+import unassert from  '../dist/esm/unassert-rollup-plugin.mjs';
 import fs from  'fs';
 import test from  'tape';
 import typescript from "@rollup/plugin-typescript"

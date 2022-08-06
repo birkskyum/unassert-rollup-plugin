@@ -8,11 +8,11 @@ export const nodeResolve = resolve({
   preferBuiltins: false
 });
 
-const config = (format): RollupOptions => ({
+const config = (format, extension): RollupOptions => ({
     input: './src/unassert.ts',
     external: ['rollup-pluginutils', 'acorn', 'escodegen', 'unassert', 'convert-source-map', 'multi-stage-sourcemap'],
     output: {
-        file: `dist/unassert-rollup-plugin.mjs`,
+        file: `dist/${format}/unassert-rollup-plugin.${extension}`,
         format,
         sourcemap: true
     },
@@ -23,8 +23,8 @@ const config = (format): RollupOptions => ({
 })
 
 const configArray: RollupOptions[] = [
-  // config('cjs'),
-  config('es')
+  config('cjs', 'cjs'),
+  config('esm', 'mjs')
 ];
 
 export default configArray
