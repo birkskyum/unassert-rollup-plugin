@@ -4,6 +4,8 @@
   "description": "Unassert Rollup plugin",
   "type": "module",
   "module": "dist/unassert-rollup-plugin.js",
+  "types": "./dist/src/unassert.d.ts",
+  "main": "./dist/unassert-rollup-plugin.js",
   "files": [
     "src",
     "dist"

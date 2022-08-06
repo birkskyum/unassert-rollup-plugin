@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "declaration": true,
     "outDir": "dist",
+    "declarationDir": ".",
     "importHelpers": false,
     "isolatedModules": true,
     //"importsNotUsedAsValues": "preserve",
@@ -20,5 +21,6 @@
   "include": [
     "src/**/*.ts",
     "rollup.config.ts"
-  ]
+  ],
+  "exclude": ["dist"]
 }
