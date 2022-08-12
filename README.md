@@ -1,6 +1,10 @@
+![MapLibre Logo](https://maplibre.org/img/maplibre-logo-big.svg)
+
 # unassert-rollup-plugin
 
 A [Rollup](http://www.rollupjs.org) plugin to remove assertion calls via [Unassert](https://github.com/unassert-js/unassert).
+
+Maintained by [MapLibre](https://maplibre.org/)
 
 
 ## Install
