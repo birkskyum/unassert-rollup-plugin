@@ -1,3 +1,5 @@
+Not maintained. This was a temporary typescript port of rollup-plugin-unassert, but it's not in use anymore.
+
 # unassert-rollup-plugin
 
 A [Rollup](http://www.rollupjs.org) plugin to remove assertion calls via [Unassert](https://github.com/unassert-js/unassert).
